@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-brand: #0055FF;
+  --color-ink: #0A0A0A;
+  --color-ink-muted: #666666;
+  --color-paper: #F5F5F4;
+  --color-paper-bright: #FFFFFF;
+  --color-line: rgba(0, 0, 0, 0.08);
+  
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+}
+
+@layer base {
+  body {
+    @apply bg-paper text-ink antialiased selection:bg-brand selection:text-white overflow-x-hidden;
+  }
+}
+
+/* Staff Design Utilities */
+.grid-line-v {
+  @apply border-r border-line;
+}
+
+.grid-line-h {
+  @apply border-b border-line;
+}
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.micro-label {
+  @apply font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted;
+}
+
+.oversized-number {
+  @apply font-display text-[12vw] md:text-[9vw] lg:text-[7vw] xl:text-[96px] leading-[0.9] tracking-[-0.04em] font-semibold;
+}
+
+.glass-panel {
+  @apply bg-white/95 backdrop-blur-2xl border border-white/60 shadow-[0_8px_32px_rgba(0,0,0,0.08)];
+}
+
+/* Animations */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-paper;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-ink/10 rounded-full hover:bg-ink/20;
+}
