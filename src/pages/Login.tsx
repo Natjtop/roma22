@@ -20,14 +20,14 @@ export const Login = () => {
             <Link to="/" className="inline-block mb-8 hover:opacity-80 transition-opacity">
               <span className="font-display font-bold text-3xl tracking-tighter text-ink">RETAINIQ</span>
             </Link>
-            <h1 className="text-3xl font-display font-semibold mb-3">З поверненням</h1>
-            <p className="text-ink-muted font-light">Введіть свої дані для доступу до панелі керування.</p>
+            <h1 className="text-3xl font-display font-semibold mb-3">Welcome back</h1>
+            <p className="text-ink-muted font-light">Enter your details to access the dashboard.</p>
           </div>
 
-          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-6" onSubmit={(e) => { e.preventDefault(); window.location.href = '/dashboard'; }}>
             <div>
               <label className="block text-sm font-medium text-ink mb-2" htmlFor="email">
-                Робоча електронна пошта
+                Work Email
               </label>
               <input 
                 type="email" 
@@ -40,9 +40,9 @@ export const Login = () => {
             <div>
               <div className="flex items-center justify-between mb-2">
                 <label className="block text-sm font-medium text-ink" htmlFor="password">
-                  Пароль
+                  Password
                 </label>
-                <a href="#" className="text-xs text-brand hover:underline">Забули пароль?</a>
+                <a href="#" className="text-xs text-brand hover:underline">Forgot password?</a>
               </div>
               <input 
                 type="password" 
@@ -53,12 +53,12 @@ export const Login = () => {
             </div>
 
             <Button type="submit" className="w-full py-6 text-base">
-              Увійти
+              Log In
             </Button>
             
-            <div className="relative flex items-center py-2">
+            <div className="relative flex items-center py-2 mt-2">
               <div className="flex-grow border-t border-line"></div>
-              <span className="flex-shrink-0 mx-4 text-ink-muted text-xs uppercase tracking-widest">Або</span>
+              <span className="flex-shrink-0 mx-4 text-ink-muted text-xs uppercase tracking-widest">Or</span>
               <div className="flex-grow border-t border-line"></div>
             </div>
 
@@ -69,12 +69,12 @@ export const Login = () => {
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              Увійти через Google
+              Log in with Google
             </Button>
           </form>
 
           <div className="mt-8 text-center text-sm text-ink-muted">
-            Немає акаунту? <Link to="/signup" className="text-brand font-medium hover:underline">Розпочніть безкоштовний період</Link>
+            Don't have an account? <Link to="/signup" className="text-brand font-medium hover:underline">Start your free trial</Link>
           </div>
         </motion.div>
       </div>
@@ -95,7 +95,7 @@ export const Login = () => {
             RetainIQ Intelligence
           </div>
           <h2 className="text-4xl lg:text-5xl font-display font-light leading-tight max-w-xl">
-            "Раніше ми дізнавалися про відтік клієнта після скасування підписки. Тепер ми знаємо про це за 30 днів."
+            "We used to find out about churn after cancellation. Now we know 30 days in advance."
           </h2>
         </motion.div>
 
@@ -107,12 +107,12 @@ export const Login = () => {
         >
           <Quote className="w-12 h-12 text-brand/50 mb-8" />
           <p className="text-xl font-light text-white/80 mb-10 max-w-lg leading-relaxed">
-            Предиктивні моделі RetainIQ допомогли нам виявити акаунти з ризиком з точністю 94%, що дозволило нашій команді CS зберегти понад $1.2M ARR лише за минулий квартал.
+            RetainIQ's predictive models helped us identify at-risk accounts with 94% accuracy, allowing our CS team to save over $1.2M ARR last quarter alone.
           </p>
           <div className="flex items-center gap-5">
-            <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center font-display font-bold text-xl border border-white/20">СД</div>
+            <div className="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center font-display font-bold text-xl border border-white/20">SJ</div>
             <div>
-              <div className="font-medium text-lg">Сара Дженкінс</div>
+              <div className="font-medium text-lg">Sarah Jenkins</div>
               <div className="text-white/50">VP of Customer Success, Linear</div>
             </div>
           </div>

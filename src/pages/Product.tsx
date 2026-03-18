@@ -225,8 +225,8 @@ export const Product = () => {
                 ))}
               </div>
               <div className="absolute bottom-4 left-8 right-8 flex justify-between text-xs text-ink-muted font-mono uppercase">
-                <span>Січ</span>
-                <span>Гру</span>
+                <span>Jan</span>
+                <span>Dec</span>
               </div>
             </div>
           </div>
@@ -304,9 +304,9 @@ export const Product = () => {
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
             {[
-              { value: "40%", label: "Середнє зростання рівня відновлення" },
-              { value: "2.5x", label: "ROI протягом перших 6 місяців" },
-              { value: "15год", label: "Зекономлено на тиждень на ручних звітах" }
+              { value: "40%", label: "Average recovery rate increase" },
+              { value: "2.5x", label: "ROI within first 6 months" },
+              { value: "15h", label: "Saved per week on manual reporting" }
             ].map((stat, i) => (
               <div key={i}>
                 <div className="text-7xl lg:text-8xl font-display font-bold text-brand mb-6">{stat.value}</div>

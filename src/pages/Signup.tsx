@@ -20,11 +20,11 @@ export const Signup = () => {
             <Link to="/" className="inline-block mb-8 hover:opacity-80 transition-opacity">
               <span className="font-display font-bold text-3xl tracking-tighter text-ink">RETAINIQ</span>
             </Link>
-            <h1 className="text-3xl font-display font-semibold mb-3">Створити акаунт</h1>
-            <p className="text-ink-muted font-light">Почніть 14-денний безкоштовний період. Без кредитної картки.</p>
+            <h1 className="text-3xl font-display font-semibold mb-3">Create an account</h1>
+            <p className="text-ink-muted font-light">Start your 14-day free trial. No credit card required.</p>
           </div>
 
-          <form className="space-y-5" onSubmit={(e) => e.preventDefault()}>
+          <form className="space-y-5" onSubmit={(e) => { e.preventDefault(); window.location.href = '/dashboard'; }}>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className="block text-sm font-medium text-ink mb-2" htmlFor="firstName">
@@ -64,7 +64,7 @@ export const Signup = () => {
 
             <div>
               <label className="block text-sm font-medium text-ink mb-2" htmlFor="email">
-                Робоча електронна пошта
+                Work Email
               </label>
               <input 
                 type="email" 
@@ -76,7 +76,7 @@ export const Signup = () => {
             
             <div>
               <label className="block text-sm font-medium text-ink mb-2" htmlFor="password">
-                Пароль
+                Password
               </label>
               <input 
                 type="password" 
@@ -84,16 +84,16 @@ export const Signup = () => {
                 className="w-full px-4 py-3 border border-line rounded-none focus:outline-hidden focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
                 placeholder="••••••••"
               />
-              <p className="text-xs text-ink-muted mt-2">Має містити щонайменше 8 символів.</p>
+              <p className="text-xs text-ink-muted mt-2">Must be at least 8 characters.</p>
             </div>
 
             <Button type="submit" className="w-full mt-4 py-6 text-base">
-              Створити акаунт
+              Create Account
             </Button>
             
             <div className="relative flex items-center py-2">
               <div className="flex-grow border-t border-line"></div>
-              <span className="flex-shrink-0 mx-4 text-ink-muted text-xs uppercase tracking-widest">Або</span>
+              <span className="flex-shrink-0 mx-4 text-ink-muted text-xs uppercase tracking-widest">Or</span>
               <div className="flex-grow border-t border-line"></div>
             </div>
 
@@ -104,12 +104,12 @@ export const Signup = () => {
                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
               </svg>
-              Зареєструватися через Google
+              Sign up with Google
             </Button>
           </form>
 
           <div className="mt-8 text-center text-sm text-ink-muted">
-            Вже маєте акаунт? <Link to="/login" className="text-brand font-medium hover:underline">Увійти</Link>
+            Already have an account? <Link to="/login" className="text-brand font-medium hover:underline">Log In</Link>
           </div>
         </motion.div>
       </div>
@@ -127,10 +127,10 @@ export const Signup = () => {
         >
           <div className="micro-label text-white/80 mb-6 flex items-center gap-3">
             <span className="w-2 h-2 bg-white rounded-full animate-pulse" />
-            Почніть утримувати клієнтів сьогодні
+            Start retaining customers today
           </div>
           <h2 className="text-4xl lg:text-5xl font-display font-light leading-tight max-w-xl">
-            Приєднуйтесь до понад 2,000 компаній, які використовують RetainIQ для захисту доходу та швидкого росту.
+            Join over 2,000 companies using RetainIQ to protect revenue and grow faster.
           </h2>
         </motion.div>
 
@@ -141,9 +141,9 @@ export const Signup = () => {
           className="relative z-10 space-y-10"
         >
           {[
-            { title: "Предиктивна Аналітика", desc: "Виявляйте ризики відтоку до того, як вони стануться." },
-            { title: "Автоматизоване Відновлення", desc: "Відновлюйте до 40% невдалих платежів." },
-            { title: "Корпоративна Безпека", desc: "Відповідність SOC2 Type II та повне шифрування." }
+            { title: "Predictive Analytics", desc: "Identify churn risks before they happen." },
+            { title: "Automated Recovery", desc: "Recover up to 40% of failed payments." },
+            { title: "Enterprise Security", desc: "SOC2 Type II compliant and fully encrypted." }
           ].map((feature, i) => (
             <div key={i} className="flex items-start gap-5">
               <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0 border border-white/20">

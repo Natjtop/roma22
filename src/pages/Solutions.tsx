@@ -11,17 +11,17 @@ export const Solutions = () => {
         <div className="max-w-4xl">
           <div className="micro-label mb-6 flex items-center gap-4">
             <span className="w-2 h-2 bg-brand rounded-full" />
-            Рішення за Ролями та Галузями
+            Solutions by Role & Industry
           </div>
           <h1 className="text-6xl lg:text-8xl font-display font-semibold tracking-tight mb-8">
-            Створено для сучасних команд з управління доходами.
+            Built for modern revenue teams.
           </h1>
           <p className="text-xl lg:text-2xl text-ink-muted font-light leading-relaxed mb-12">
-            Незалежно від того, чи ви засновник, який захищає капітал, фінансовий лідер, який звіряє доходи, або менеджер з успіху клієнтів, який рятує акаунти, RetainIQ має рішення, адаптоване для ваших конкретних потреб.
+            Whether you're a founder protecting equity, a finance leader reconciling revenue, or a customer success manager saving accounts, RetainIQ has a solution tailored for your specific needs.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg">Знайти Своє Рішення</Button>
-            <Button variant="outline" size="lg">Зв'язатися з Відділом Продажів</Button>
+            <Button size="lg">Find Your Solution</Button>
+            <Button variant="outline" size="lg">Contact Sales</Button>
           </div>
         </div>
       </section>
@@ -31,25 +31,25 @@ export const Solutions = () => {
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20 space-y-32">
           {[
             {
-              role: "Для Засновників та CEO",
-              title: "Захистіть свій капітал та оцінку.",
-              desc: "Відтік клієнтів — це тихий вбивця оцінок SaaS-компаній. RetainIQ надає вам метрики, готові для ради директорів, та автоматизовані робочі процеси, щоб забезпечити чисте утримання доходу вище 110%.",
+              role: "For Founders & CEOs",
+              title: "Protect your equity and valuation.",
+              desc: "Churn is the silent killer of SaaS valuations. RetainIQ provides you with board-ready metrics and automated workflows to ensure net revenue retention stays above 110%.",
               icon: <Building2 className="w-8 h-8" />,
-              benefits: ["Звітність для ради директорів", "Захист оцінки компанії", "Автоматизоване відновлення доходу"]
+              benefits: ["Board-ready reporting", "Valuation protection", "Automated revenue recovery"]
             },
             {
-              role: "Для Фінансових Лідерів",
-              title: "Звіряйте доходи та точно прогнозуйте.",
-              desc: "Припиніть вгадувати свій грошовий потік. Отримайте точну видимість у реальному часі змін MRR, невдалих платежів та очікуваних показників відновлення.",
+              role: "For Finance Leaders",
+              title: "Reconcile revenue and forecast accurately.",
+              desc: "Stop guessing your cash flow. Get accurate, real-time visibility into MRR movements, failed payments, and expected recovery rates.",
               icon: <Briefcase className="w-8 h-8" />,
-              benefits: ["Точне прогнозування грошових потоків", "Автоматизоване стягнення боргів", "Звітність за стандартами GAAP"]
+              benefits: ["Accurate cash flow forecasting", "Automated dunning", "GAAP-compliant reporting"]
             },
             {
-              role: "Для Менеджерів з Успіху Клієнтів",
-              title: "Зосередьтеся на акаунтах, які потребують допомоги.",
-              desc: "Не чекайте на запит про скасування. Наш предиктивний скоринг точно вказує вашій команді, які акаунти знаходяться в зоні ризику, і які дії потрібно вжити, щоб їх врятувати.",
+              role: "For Customer Success Managers",
+              title: "Focus on accounts that need help.",
+              desc: "Don't wait for a cancellation request. Our predictive scoring pinpoints exactly which accounts are at risk and what actions your team needs to take to save them.",
               icon: <Users className="w-8 h-8" />,
-              benefits: ["Предиктивний скоринг відтоку", "Автоматизовані сценарії дій", "Відстеження показників здоров'я"]
+              benefits: ["Predictive churn scoring", "Automated playbooks", "Health score tracking"]
             }
           ].map((solution, i) => (
             <motion.div 
@@ -75,7 +75,7 @@ export const Solutions = () => {
                     </li>
                   ))}
                 </ul>
-                <Button variant="outline">Дізнатися більше про {solution.role.split(' ')[1]}</Button>
+                <Button variant="outline">Learn more about {solution.role.split(' ')[1]}</Button>
               </div>
               <div className={`aspect-square bg-white border border-line p-8 flex items-center justify-center relative overflow-hidden ${i % 2 !== 0 ? "lg:order-1" : ""}`}>
                 <div className="absolute inset-0 opacity-[0.02]" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -93,14 +93,14 @@ export const Solutions = () => {
       <section className="py-32 bg-white border-b border-line">
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl font-display font-semibold mb-6">Адаптовано для вашої бізнес-моделі.</h2>
-            <p className="text-xl text-ink-muted font-light">Різні моделі підписок мають різну динаміку відтоку. Ми адаптуємося до вашої.</p>
+            <h2 className="text-4xl font-display font-semibold mb-6">Tailored to your business model.</h2>
+            <p className="text-xl text-ink-muted font-light">Different subscription models have different churn dynamics. We adapt to yours.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "B2B SaaS", desc: "Відстежуйте здоров'я на рівні акаунта, використання робочих місць та поновлення контрактів.", icon: <Building2 className="w-6 h-6" /> },
-              { title: "Споживчі Підписки", desc: "Керуйте великим обсягом відтоку з низьким ACV за допомогою автоматизованих послідовностей відновлення.", icon: <ShoppingCart className="w-6 h-6" /> },
-              { title: "Цифрові Медіа", desc: "Аналізуйте патерни споживання контенту, щоб передбачити відмову підписників.", icon: <Video className="w-6 h-6" /> }
+              { title: "B2B SaaS", desc: "Track account-level health, seat utilization, and contract renewals.", icon: <Building2 className="w-6 h-6" /> },
+              { title: "Consumer Subscriptions", desc: "Manage high-volume, low-ACV churn with automated recovery sequences.", icon: <ShoppingCart className="w-6 h-6" /> },
+              { title: "Digital Media", desc: "Analyze content consumption patterns to predict subscriber drop-off.", icon: <Video className="w-6 h-6" /> }
             ].map((industry, i) => (
               <motion.div 
                 key={i}
@@ -116,7 +116,7 @@ export const Solutions = () => {
                 <h3 className="text-xl font-display font-semibold mb-3">{industry.title}</h3>
                 <p className="text-ink-muted leading-relaxed mb-6">{industry.desc}</p>
                 <div className="flex items-center gap-2 text-sm font-medium text-brand">
-                  Переглянути кейси <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  View case studies <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </div>
               </motion.div>
             ))}
@@ -128,9 +128,9 @@ export const Solutions = () => {
       <section className="py-32 bg-paper border-b border-line overflow-hidden">
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <div className="micro-label text-brand mb-6">Екосистема Інтеграцій</div>
-            <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-6">Працює з вашим існуючим стеком.</h2>
-            <p className="text-xl text-ink-muted font-light">Не потрібно змінювати ваші поточні інструменти. RetainIQ безшовно інтегрується з вашими платіжними шлюзами, CRM та системами підтримки.</p>
+            <div className="micro-label text-brand mb-6">Integration Ecosystem</div>
+            <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-6">Works with your existing stack.</h2>
+            <p className="text-xl text-ink-muted font-light">No need to rip and replace your current tools. RetainIQ integrates seamlessly with your payment gateways, CRM, and support systems.</p>
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -159,10 +159,10 @@ export const Solutions = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <div className="order-2 lg:order-1 grid grid-cols-2 gap-4">
               {[
-                { title: "SOC 2 Type II", desc: "Щорічний аудит безпеки", icon: <FileText className="w-5 h-5" /> },
-                { title: "GDPR Compliant", desc: "Повний захист даних ЄС", icon: <CheckCircle2 className="w-5 h-5" /> },
-                { title: "PCI DSS", desc: "Безпека платіжних даних", icon: <ShoppingCart className="w-5 h-5" /> },
-                { title: "Шифрування", desc: "AES-256 в стані спокою", icon: <Briefcase className="w-5 h-5" /> }
+                { title: "SOC 2 Type II", desc: "Annual security audit", icon: <FileText className="w-5 h-5" /> },
+                { title: "GDPR Compliant", desc: "Full EU data protection", icon: <CheckCircle2 className="w-5 h-5" /> },
+                { title: "PCI DSS", desc: "Payment data security", icon: <ShoppingCart className="w-5 h-5" /> },
+                { title: "Encryption", desc: "AES-256 at rest", icon: <Briefcase className="w-5 h-5" /> }
               ].map((item, i) => (
                 <div key={i} className="bg-paper p-8 border border-line">
                   <div className="w-10 h-10 bg-white border border-line flex items-center justify-center text-brand mb-4">
@@ -174,12 +174,12 @@ export const Solutions = () => {
               ))}
             </div>
             <div className="order-1 lg:order-2">
-              <div className="micro-label text-brand mb-6">Безпека корпоративного рівня</div>
-              <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">Ваші дані в безпеці.</h2>
+              <div className="micro-label text-brand mb-6">Enterprise-grade security</div>
+              <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">Your data is safe.</h2>
               <p className="text-xl text-ink-muted font-light leading-relaxed mb-8">
-                Ми розуміємо, що дані про доходи є найбільш чутливою інформацією вашого бізнесу. Тому ми побудували RetainIQ з безпекою як фундаментальним принципом, а не як додатковою функцією.
+                We understand that revenue data is the most sensitive information in your business. That's why we built RetainIQ with security as a fundamental principle, not an afterthought.
               </p>
-              <Button variant="outline">Читати політику безпеки</Button>
+              <Button variant="outline">Read security policy</Button>
             </div>
           </div>
         </div>
@@ -190,13 +190,13 @@ export const Solutions = () => {
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             <div className="p-12 border border-white/10 bg-white/5">
-              <div className="micro-label text-white/40 mb-8">До RetainIQ</div>
+              <div className="micro-label text-white/40 mb-8">Before RetainIQ</div>
               <ul className="space-y-6">
                 {[
-                  "Дізнаєтесь про відтік клієнта після того, як він скасував підписку.",
-                  "Використовуєте загальні, універсальні графіки повторних спроб для невдалих платежів.",
-                  "Вручну експортуєте дані Stripe в Excel для розрахунку MRR.",
-                  "Команди з успіху клієнтів вгадують, які акаунти потребують уваги."
+                  "Finding out a customer churned after they canceled.",
+                  "Using generic, one-size-fits-all retry schedules for failed payments.",
+                  "Manually exporting Stripe data to Excel to calculate MRR.",
+                  "Customer Success teams guessing which accounts need attention."
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4 text-white/60 font-light">
                     <div className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 mt-0.5 text-xs">✕</div>
@@ -206,13 +206,13 @@ export const Solutions = () => {
               </ul>
             </div>
             <div className="p-12 border border-brand bg-brand/10">
-              <div className="micro-label text-brand mb-8">Після RetainIQ</div>
+              <div className="micro-label text-brand mb-8">After RetainIQ</div>
               <ul className="space-y-6">
                 {[
-                  "Отримуєте автоматичні сповіщення за 30 днів до відтоку цінного акаунта.",
-                  "Відновлюєте на 40% більше невдалих платежів за допомогою логіки повторних спроб на базі машинного навчання.",
-                  "Інформаційні панелі в реальному часі, готові для ради директорів, для всіх метрик доходу.",
-                  "Команди з успіху клієнтів озброєні пріоритетними списками акаунтів у зоні ризику та сценаріями дій."
+                  "Getting automated alerts 30 days before a high-value account churns.",
+                  "Recovering 40% more failed payments with ML-powered retry logic.",
+                  "Real-time, board-ready dashboards for all revenue metrics.",
+                  "Customer Success teams armed with prioritized lists of at-risk accounts and playbooks."
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-4 text-white font-light">
                     <div className="w-6 h-6 rounded-full bg-brand flex items-center justify-center shrink-0 mt-0.5 text-xs">✓</div>
@@ -227,10 +227,10 @@ export const Solutions = () => {
 
       {/* CTA */}
       <section className="py-32 text-center bg-white">
-        <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">Подивіться, як це працює для вашої команди.</h2>
+        <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">See how it works for your team.</h2>
         <div className="flex justify-center gap-4">
-          <Button size="lg">Замовити Демо</Button>
-          <Button variant="outline" size="lg">Переглянути Ціни</Button>
+          <Button size="lg">Book a Demo</Button>
+          <Button variant="outline" size="lg">View Pricing</Button>
         </div>
       </section>
     </main>

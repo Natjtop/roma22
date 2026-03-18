@@ -11,17 +11,17 @@ export const Resources = () => {
         <div className="max-w-4xl">
           <div className="micro-label mb-6 flex items-center gap-4">
             <span className="w-2 h-2 bg-brand rounded-full" />
-            Центр Ресурсів
+            Resource Center
           </div>
           <h1 className="text-6xl lg:text-8xl font-display font-semibold tracking-tight mb-8">
-            Опануйте мистецтво утримання.
+            Master the art of retention.
           </h1>
           <p className="text-xl lg:text-2xl text-ink-muted font-light leading-relaxed mb-12">
-            Досліджуйте нашу бібліотеку посібників, тематичних досліджень та вебінарів, щоб дізнатися, як найшвидше зростаючі SaaS-компанії борються з відтоком та максимізують LTV.
+            Explore our library of guides, case studies, and webinars to learn how the fastest-growing SaaS companies fight churn and maximize LTV.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Button size="lg">Переглянути Весь Контент</Button>
-            <Button variant="outline" size="lg">Підписатися на Розсилку</Button>
+            <Button size="lg">View All Content</Button>
+            <Button variant="outline" size="lg">Subscribe to Newsletter</Button>
           </div>
         </div>
       </section>
@@ -30,30 +30,30 @@ export const Resources = () => {
       <section className="bg-paper py-32 border-y border-line">
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="flex items-center justify-between mb-16">
-            <h2 className="text-4xl font-display font-semibold">Останні Інсайти</h2>
-            <Button variant="ghost" className="hidden md:flex">Переглянути Всі Статті</Button>
+            <h2 className="text-4xl font-display font-semibold">Latest Insights</h2>
+            <Button variant="ghost" className="hidden md:flex">View All Articles</Button>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                type: "Посібник",
-                title: "Повний Посібник з Управління Стягненням у 2026 році",
-                desc: "Дізнайтеся, як відновити до 40% невдалих платежів за допомогою розумної логіки повторних спроб та персоналізованого спілкування.",
+                type: "Guide",
+                title: "The Complete Guide to Dunning Management in 2026",
+                desc: "Learn how to recover up to 40% of failed payments with smart retry logic and personalized communication.",
                 icon: <BookOpen className="w-5 h-5" />,
                 image: "bg-brand/10 text-brand"
               },
               {
-                type: "Кейс",
-                title: "Як Acme Corp Зменшила Відтік на 25% за 90 Днів",
-                desc: "Відкрийте для себе точні сценарії, які Acme Corp використовувала для виявлення клієнтів у зоні ризику та збереження $1.2М ARR.",
+                type: "Case Study",
+                title: "How Acme Corp Reduced Churn by 25% in 90 Days",
+                desc: "Discover the exact playbooks Acme Corp used to identify at-risk customers and save $1.2M in ARR.",
                 icon: <FileText className="w-5 h-5" />,
                 image: "bg-indigo-500/10 text-indigo-500"
               },
               {
-                type: "Вебінар",
-                title: "Предиктивна Аналітика для Команд з Успіху Клієнтів",
-                desc: "Приєднуйтесь до нашого Віце-президента з Data Science, яка розбирає 5 поведінкових сигналів, що передбачають відтік з точністю 90%.",
+                type: "Webinar",
+                title: "Predictive Analytics for Customer Success Teams",
+                desc: "Join our VP of Data Science as she breaks down the 5 behavioral signals that predict churn with 90% accuracy.",
                 icon: <Video className="w-5 h-5" />,
                 image: "bg-emerald-500/10 text-emerald-500"
               }
@@ -76,7 +76,7 @@ export const Resources = () => {
                   <h3 className="text-2xl font-display font-semibold mb-4 group-hover:text-brand transition-colors">{resource.title}</h3>
                   <p className="text-ink-muted leading-relaxed mb-8 flex-1">{resource.desc}</p>
                   <div className="flex items-center gap-2 text-sm font-medium text-ink group-hover:text-brand transition-colors">
-                    Читати далі <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    Read more <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </motion.div>
@@ -90,17 +90,17 @@ export const Resources = () => {
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 gap-8">
             <div className="max-w-2xl">
-              <div className="micro-label text-brand mb-6">Живі Події</div>
-              <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-6">Майбутні Вебінари</h2>
-              <p className="text-xl text-white/60 font-light">Приєднуйтесь до наших експертів наживо, щоб обговорити останні тренди в утриманні клієнтів та поставити свої запитання.</p>
+              <div className="micro-label text-brand mb-6">Live Events</div>
+              <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-6">Upcoming Webinars</h2>
+              <p className="text-xl text-white/60 font-light">Join our experts live to discuss the latest trends in customer retention and ask your questions.</p>
             </div>
-            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">Переглянути всі події</Button>
+            <Button variant="outline" className="border-white/20 text-white hover:bg-white/10">View all events</Button>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
-              { date: "24 Березня, 2026", time: "10:00 AM PST", title: "Майстер-клас: Зниження мимовільного відтоку на 50%", speaker: "Олена Коваленко, VP of Product", role: "RetainIQ" },
-              { date: "05 Квітня, 2026", time: "1:00 PM EST", title: "Як побудувати предиктивну модель здоров'я клієнта", speaker: "Дмитро Сидоренко, Head of Data Science", role: "RetainIQ" }
+              { date: "March 24, 2026", time: "10:00 AM PST", title: "Masterclass: Reducing Involuntary Churn by 50%", speaker: "Elena Kovalenko, VP of Product", role: "RetainIQ" },
+              { date: "April 05, 2026", time: "1:00 PM EST", title: "How to Build a Predictive Customer Health Model", speaker: "Dmitry Sidorenko, Head of Data Science", role: "RetainIQ" }
             ].map((webinar, i) => (
               <motion.div 
                 key={i}
@@ -128,7 +128,7 @@ export const Resources = () => {
                   </div>
                 </div>
                 <Button className="w-full md:w-auto bg-white text-ink hover:bg-brand hover:text-white border-none shrink-0">
-                  Зареєструватися
+                  Register
                 </Button>
               </motion.div>
             ))}
@@ -140,14 +140,14 @@ export const Resources = () => {
       <section className="py-32 bg-white border-b border-line">
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-4xl font-display font-semibold mb-6">Досліджуйте за Категоріями</h2>
-            <p className="text-xl text-ink-muted font-light">Знайдіть саме те, що вам потрібно, щоб покращити вашу стратегію утримання.</p>
+            <h2 className="text-4xl font-display font-semibold mb-6">Explore by Category</h2>
+            <p className="text-xl text-ink-muted font-light">Find exactly what you need to improve your retention strategy.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { title: "Електронні Книги та Звіти", desc: "Глибоке занурення в галузеві стандарти та найкращі практики.", icon: <BookMarked className="w-6 h-6" />, action: "Завантажити PDF" },
-              { title: "Відеобібліотека", desc: "Вебінари за запитом, навчальні посібники з продуктів та інтерв'ю.", icon: <PlayCircle className="w-6 h-6" />, action: "Дивитися Відео" },
-              { title: "Шаблони", desc: "Готові до використання серії листів, сценарії дій та електронні таблиці.", icon: <Download className="w-6 h-6" />, action: "Отримати Шаблони" }
+              { title: "E-books & Reports", desc: "Deep dives into industry benchmarks and best practices.", icon: <BookMarked className="w-6 h-6" />, action: "Download PDF" },
+              { title: "Video Library", desc: "On-demand webinars, product tutorials, and interviews.", icon: <PlayCircle className="w-6 h-6" />, action: "Watch Videos" },
+              { title: "Templates", desc: "Ready-to-use email sequences, playbooks, and spreadsheets.", icon: <Download className="w-6 h-6" />, action: "Get Templates" }
             ].map((category, i) => (
               <motion.div 
                 key={i}
@@ -175,9 +175,9 @@ export const Resources = () => {
       <section className="py-32 bg-ink text-white">
         <div className="max-w-[1800px] mx-auto px-8 lg:px-20">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="micro-label text-brand mb-6">Посібник з Утримання</div>
-            <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">Отримуйте найкращі стратегії утримання щотижня.</h2>
-            <p className="text-xl text-white/60 font-light mb-12">Приєднуйтесь до 20,000+ засновників та лідерів CS, які читають нашу розсилку, щоб бути на крок попереду відтоку.</p>
+            <div className="micro-label text-brand mb-6">Retention Guide</div>
+            <h2 className="text-4xl lg:text-5xl font-display font-semibold mb-8">Get the best retention strategies weekly.</h2>
+            <p className="text-xl text-white/60 font-light mb-12">Join 20,000+ founders and CS leaders who read our newsletter to stay one step ahead of churn.</p>
             <form className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto" onSubmit={(e) => e.preventDefault()}>
               <input 
                 type="email" 
@@ -185,10 +185,10 @@ export const Resources = () => {
                 className="flex-1 px-6 py-4 bg-white/5 border border-white/20 text-white placeholder:text-white/40 focus:outline-hidden focus:border-brand transition-colors"
               />
               <Button size="lg" className="bg-brand text-white hover:bg-brand/90 border-none">
-                Підписатися
+                Subscribe
               </Button>
             </form>
-            <p className="text-sm text-white/40 mt-6">Ніякого спаму. Відпишіться в будь-який час.</p>
+            <p className="text-sm text-white/40 mt-6">No spam. Unsubscribe at any time.</p>
           </div>
         </div>
       </section>
